@@ -1,0 +1,160 @@
+{
+  "photographer": {
+    "name": "Seu Nome",
+    "tagline": "Capturando momentos eternos",
+    "location": "Brasil",
+    "email": "contato@seunome.com",
+    "phone": "+55 (11) 99999-9999",
+    "instagram": "@seunome",
+    "since": 2015
+  },
+  "categories": [
+    { "id": "portrait",  "label": "Retrato"   },
+    { "id": "landscape", "label": "Paisagem"  },
+    { "id": "wedding",   "label": "Casamento" },
+    { "id": "urban",     "label": "Urbano"    },
+    { "id": "fashion",   "label": "Fashion"   },
+    { "id": "nature",    "label": "Natureza"  }
+  ],
+  "photos": [
+    {
+      "id": 1,
+      "title": "Luz Dourada",
+      "category": "Portrait",
+      "src": "assets/images/gallery/photo-01.jpg",
+      "placeholder": ["#2a1506", "#3d2010"],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Horizonte Infinito",
+      "category": "Landscape",
+      "src": "assets/images/gallery/photo-02.jpg",
+      "placeholder": ["#0a1520", "#152030"],
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "O Eterno Sim",
+      "category": "Wedding",
+      "src": "assets/images/gallery/photo-03.jpg",
+      "placeholder": ["#151008", "#201810"],
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Metrópole",
+      "category": "Urban",
+      "src": "assets/images/gallery/photo-04.jpg",
+      "placeholder": ["#0f1a10", "#182418"],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Vanguarda",
+      "category": "Fashion",
+      "src": "assets/images/gallery/photo-05.jpg",
+      "placeholder": ["#1a1020", "#281830"],
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Floresta Silenciosa",
+      "category": "Nature",
+      "src": "assets/images/gallery/photo-06.jpg",
+      "placeholder": ["#0d1a08", "#182410"],
+      "featured": true
+    },
+    {
+      "id": 7,
+      "title": "Alma Nua",
+      "category": "Portrait",
+      "src": "assets/images/gallery/photo-07.jpg",
+      "placeholder": ["#1a0a08", "#2a1210"],
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Marés do Tempo",
+      "category": "Landscape",
+      "src": "assets/images/gallery/photo-08.jpg",
+      "placeholder": ["#081018", "#102030"],
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Promessa",
+      "category": "Wedding",
+      "src": "assets/images/gallery/photo-09.jpg",
+      "placeholder": ["#18100a", "#281808"],
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Concreto e Sonho",
+      "category": "Urban",
+      "src": "assets/images/gallery/photo-10.jpg",
+      "placeholder": ["#101018", "#181828"],
+      "featured": false
+    },
+    {
+      "id": 11,
+      "title": "Minimalismo",
+      "category": "Fashion",
+      "src": "assets/images/gallery/photo-11.jpg",
+      "placeholder": ["#181018", "#281428"],
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Névoa da Manhã",
+      "category": "Nature",
+      "src": "assets/images/gallery/photo-12.jpg",
+      "placeholder": ["#101418", "#182030"],
+      "featured": true
+    }
+  ],
+  "services": [
+    {
+      "id": "portrait",
+      "title": "Retratos",
+      "description": "Sessões individuais e familiares que capturam a essência e personalidade de cada pessoa com luz e composição cuidadosas.",
+      "price_from": "R$ 800"
+    },
+    {
+      "id": "wedding",
+      "title": "Casamentos",
+      "description": "Cobertura completa do seu grande dia, desde os preparativos até a festa, preservando cada detalhe e emoção.",
+      "price_from": "R$ 3.500"
+    },
+    {
+      "id": "corporate",
+      "title": "Corporativo",
+      "description": "Fotografia profissional para empresas: eventos, headshots, produtos e comunicação institucional de alto impacto.",
+      "price_from": "R$ 1.200"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "As fotos do nosso casamento ficaram absolutamente incríveis. Cada imagem conta uma história e captura emoções que jamais queríamos esquecer.",
+      "author": "Maria & João",
+      "role": "Noivos — Casamento 2024",
+      "avatar": "assets/images/ui/avatar-1.jpg"
+    },
+    {
+      "id": 2,
+      "quote": "Profissionalismo impecável. As fotos corporativas transformaram nossa comunicação visual por completo. Resultado além das expectativas.",
+      "author": "Ana Carolina",
+      "role": "Diretora de Marketing",
+      "avatar": "assets/images/ui/avatar-2.jpg"
+    },
+    {
+      "id": 3,
+      "quote": "A sessão de retratos foi uma experiência transformadora. Nunca me senti tão confortável na frente de uma câmera, e as fotos ficaram lindas.",
+      "author": "Rafael Souza",
+      "role": "Sessão de Retratos",
+      "avatar": "assets/images/ui/avatar-3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+/* ============================================
+   SCROLL-TRIGGERED REVEAL
+   ============================================ */
+
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-reveal="up"]    { transform: translateY(40px); }
+[data-reveal="down"]  { transform: translateY(-40px); }
+[data-reveal="left"]  { transform: translateX(-40px); }
+[data-reveal="right"] { transform: translateX(40px); }
+[data-reveal="scale"] { transform: scale(0.9); }
+[data-reveal="fade"]  { transform: none; }
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays */
+[data-delay="1"] { transition-delay: 0.1s; }
+[data-delay="2"] { transition-delay: 0.2s; }
+[data-delay="3"] { transition-delay: 0.3s; }
+[data-delay="4"] { transition-delay: 0.4s; }
+[data-delay="5"] { transition-delay: 0.5s; }
+[data-delay="6"] { transition-delay: 0.6s; }
+
+/* ============================================
+   CURSOR
+   ============================================ */
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(201,169,110,0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+}
+
+.cursor.hover { transform: scale(2.5); }
+.cursor-ring.hover {
+  width: 60px;
+  height: 60px;
+  border-color: var(--color-gold);
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(201,169,110,0.2);
+  border-top-color: var(--color-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   GOLD SHIMMER (used on titles)
+   ============================================ */
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 40%,
+    var(--color-gold) 50%,
+    var(--color-gold-light) 60%,
+    var(--color-gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerMove 4s linear infinite;
+}
+
+@keyframes shimmerMove {
+  to { background-position: 200% center; }
+}
+
+/* ============================================
+   PAGE TRANSITION
+   ============================================ */
+
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  pointer-events: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.page-transition-panel {
+  flex: 1;
+  background: var(--color-cover-dark);
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+/* ============================================
+   NOISE TEXTURE OVERLAY
+   ============================================ */
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ============================================
+   SMOOTH ENTRANCE for gallery items
+   ============================================ */
+
+.gallery-grid .photo-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+}
+
+.gallery-grid .photo-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-grid .photo-card.hidden-filter {
+  opacity: 0 !important;
+  transform: scale(0.95) !important;
+  pointer-events: none;
+}
+
+/* ============================================
+   FORM SUCCESS STATE
+   ============================================ */
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--color-gold);
+}
+
+.form-success.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  animation: fadeIn 0.5s ease;
+}
+
+.form-success svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-gold);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   FLOATING LABEL
+   ============================================ */
+
+.form-group.floating {
+  position: relative;
+}
+
+.form-group.floating .form-label {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-size: var(--fs-sm);
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(154,144,128,0.6);
+  pointer-events: none;
+  transition: all var(--transition-base);
+}
+
+.form-group.floating .form-input:focus + .form-label,
+.form-group.floating .form-input:not(:placeholder-shown) + .form-label {
+  top: var(--space-2);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
