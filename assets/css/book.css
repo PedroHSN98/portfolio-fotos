@@ -106,7 +106,7 @@
 }
 
 .book-scene.is-open .book-wrapper {
-  transform: rotateX(2deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg) translateX(calc(var(--book-width) / 2));
   animation: none;
 }
 
@@ -453,7 +453,7 @@
 
 .book-inner {
   position: absolute;
-  left: var(--book-depth);
+  left: 0;
   top: 2px;
   bottom: 2px;
   right: 0;

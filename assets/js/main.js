@@ -211,18 +211,16 @@ function initNoiseOverlay() {
 /* ============================================
    BOOT
    ============================================ */
-document.addEventListener('DOMContentLoaded', () => {
-  // Prevent scrolling during intro
-  document.body.style.overflow = 'hidden';
+// Scripts are loaded dynamically by loader.js after DOMContentLoaded has already fired.
+// Run init directly — the DOM is guaranteed to be ready at this point.
+document.body.style.overflow = 'hidden';
 
-  // Init modules
-  BookAnimation.init();
-  Cursor.init();
-  ScrollReveal.init();
-  Navigation.init();
-  Gallery.init();
-  Testimonials.init();
-  CounterAnimation.init();
-  ContactForm.init();
-  initNoiseOverlay();
-});
+BookAnimation.init();
+Cursor.init();
+ScrollReveal.init();
+Navigation.init();
+Gallery.init();
+Testimonials.init();
+CounterAnimation.init();
+ContactForm.init();
+initNoiseOverlay();

@@ -1,0 +1,42 @@
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery" aria-label="Galeria de fotos">
+  <div class="section">
+    <header class="section-header" data-reveal="up">
+      <span class="section-eyebrow">Portfólio</span>
+      <h2 class="section-title">Meu Trabalho <em>em Imagens</em></h2>
+      <p class="section-desc">
+        Uma seleção cuidadosa das minhas melhores capturas ao longo dos anos.
+        Cada fotografia é uma janela para um instante único e irrepetível.
+      </p>
+      <div class="section-divider" aria-hidden="true">
+        <span></span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-gold-dark)">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Filters -->
+    <div class="gallery-filters" role="group" aria-label="Filtrar por categoria" data-reveal="up" data-delay="2">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="portrait">Retratos</button>
+      <button class="filter-btn" data-filter="landscape">Paisagens</button>
+      <button class="filter-btn" data-filter="wedding">Casamentos</button>
+      <button class="filter-btn" data-filter="urban">Urbano</button>
+      <button class="filter-btn" data-filter="fashion">Fashion</button>
+      <button class="filter-btn" data-filter="nature">Natureza</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="gallery-grid" id="photo-grid" role="list" aria-label="Galeria de fotografias"></div>
+
+    <div class="gallery-footer" data-reveal="up">
+      <a href="#contact" class="btn btn-outline">
+        Ver Mais &amp; Agendar
+      </a>
+    </div>
+  </div>
+</section>
